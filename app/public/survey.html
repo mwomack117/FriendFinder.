@@ -6,9 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS and JS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
@@ -176,7 +175,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="" alt="" height="350" width="300">
+          <img id="match-img" src="" alt="" height="350" width="350">
         </div>
         <div class="modal-footer"></div>
       </div>
@@ -184,31 +183,34 @@
     </div>
   </div>
 
-  <!-- Optional JavaScript -->
-  <script type="text/JavaScript">
+  <!-- bootstrap JS-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script type="text/JavaScript">
     // Capture form inputs
     $("#submit").on("click", function(event){
       event.preventDefault();
 
     // Function to validate form
-    // function validateForm() {
-    //   var isValid = true;
-    //   $(".form-control").each(function() {
-    //     if ($(this).val() === "") {
-    //       isValid = false;
-    //     }
-    //   });
-
-    //   $(".chosen-select").each(function() {
-    //     if ($(this).val() === "") {
-    //       isValid = false;
-    //     }
-    //   });
-    //   return isValid;
-    // }
+    function validateForm() {
+      var isValid = true;
+      // Check to see if Name and Photo are filled 
+      $(".form-control").each(function() {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+    // check to see if all answers are filled
+      $(".chosen-select").each(function() {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+      return isValid;
+    } // end of validateForm
     
     // If all required fields are filled
-    // if (validateForm()) {
+    if (validateForm()) {
 
     // Create object for user's submitted data
     var newData = {
@@ -228,21 +230,18 @@
       ]
     };
 
-      
-    
-
+  // AJAX post the data to friends API
   $.post("/api/friends", newData, function(data) {
     console.log(data.name)
     console.log(data.photo)
-        
-          alert("working");
+    alert("working");
           
-        // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-        // $("#match-name").text(data[0].name);
-        // $("#match-img").attr("src", data[0].photo);
+        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $("#match-name").text(data.name);
+        $("#match-img").attr("src", data.photo);
 
-        // // Show the modal with the best match
-        // $("#results-modal").modal("toggle");
+        // Show the modal with the best match
+        jQuery("#results-modal").modal("toggle");
 
 
         // Clear the form when submitting
@@ -259,16 +258,15 @@
         $("#q9").val(""),
         $("#q10").val("")
       });
-    
+
+    } else {
+      alert("Please complete the survey before submitting.")
+    }
      
 
   })
-
   
   </script>
-
-
-
-</body>
+  
 
 </html>
