@@ -7,18 +7,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
 
   <!-- Chosen -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 
 
   <title>Survey</title>
 </head>
 
 <body>
+
+  <section id="header">
+    <div class="container">
+      <div class="text-center">
+        <h1>
+          <i class="fas fa-users text-center"></i>Friend Finder</h1>
+        <h2>Answer a few basic questions.
+          <br /> Then find the friend with the greatest compatibility!</h2>
+        <br />
+
+        <div class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block slide-img" src="assets/images/friends4.jpg"> 
+            </div>
+            <div class="carousel-item">
+              <img class="d-block slide-img" src="assets/images/friends2.jpg"> 
+            </div>
+            <div class="carousel-item">
+              <img class="d-block slide-img" src="assets/images/friends3.jpg"> 
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
   <div class="container">
 
     <h1 style="padding-top: 20px">Survey Questions</h1>
@@ -150,14 +188,14 @@
 
 
 
-    <footer style="padding-bottom: 20px" class="footer">
+    <footer class="footer">
 
       <div class="container">
-        <a href="/">Home</a>
+        <a href="/"><i class="fas fa-home"></i>&nbsp;Home</a>
         |
         <a href="/api/friends">API Friends List</a>
         |
-        <a href="https://github.com/mwomack117/FriendFinder.">Github Repo</a>
+        <a href="https://github.com/mwomack117/FriendFinder."><i class="fab fa-github"></i>&nbsp;Github Repo</a>
       </div>
     </footer>
 
@@ -170,23 +208,33 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h2 class="modal-title"><strong>Best Match</strong></h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
           <img id="match-img" src="" alt="" height="350" width="350">
         </div>
-        <div class="modal-footer"></div>
+        <div class="modal-footer">
+          <h3><i class="fas fa-user-friends"></i>FriendFinder</h3>
+        </div>
       </div>
 
     </div>
   </div>
 
-  <!-- bootstrap JS-->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- Optional JavaScript -->
-<script type="text/JavaScript">
+  <!-- bootstrap JS and jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <script type="text/JavaScript">
+    // set interval for carousel slides
+    $('.carousel').carousel({
+    interval: 3000
+    })
+
     // Capture form inputs
     $("#submit").on("click", function(event){
       event.preventDefault();
@@ -267,6 +315,6 @@
   })
   
   </script>
-  
+
 
 </html>

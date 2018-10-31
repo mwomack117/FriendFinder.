@@ -1,0 +1,22 @@
+.slide-img {
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    border-radius: 7px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.footer {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.footer a {
+    padding: 5px;
+}
+
+
+

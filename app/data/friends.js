@@ -21,7 +21,7 @@ var friendsArray = [
         "name": "George",
         "photo": "https://vignette.wikia.nocookie.net/seinfeld/images/7/76/George-costanza.jpg/revision/latest?cb=20110406222711",
         "scores": [
-            "4",
+            "1",
             "2",
             "5",
             "1",
@@ -38,14 +38,14 @@ var friendsArray = [
         "photo": "https://pbs.twimg.com/profile_images/531443399862140928/EEEf6pjH_400x400.jpeg",
         "scores": [
             "5",
-            "1",
+            "2",
             "2",
             "5",
             "2",
             "3",
             "4",
             "2",
-            "1",
+            "5",
             "4"
         ]
     },
@@ -112,7 +112,40 @@ var friendsArray = [
             "3",
             "1"
         ]
+    },
+    {
+        "name": "Kramer",
+        "photo": "https://static.tvgcdn.net/rovi/showcards/feed/543/thumbs/30665543_1300x1733.jpg",
+        "scores": [
+            "1",
+            "2",
+            "5",
+            "2",
+            "5",
+            "3",
+            "1",
+            "1",
+            "2",
+            "2"
+        ]
+    },
+    {
+        "name": "Emmie",
+        "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/03/26125843/yorkshire-terrier-cover.jpg",
+        "scores": [
+            "1",
+            "1",
+            "1",
+            "2",
+            "3",
+            "3",
+            "1",
+            "2",
+            "2",
+            "4"
+        ]
     }
+
 ];
 
 module.exports = friendsArray;
