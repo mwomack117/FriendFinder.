@@ -1,5 +1,8 @@
 # FriendFinder.
-A compatibility-based "FriendFinder" application -- basically a dating app. 
+A compatibility-based "FriendFinder" application -- find friends or a date.
+
+### DEMO
+https://drive.google.com/file/d/1HSi2Q2JzmRFU1UIfn8Wa9-z5CUHZYwVf/view
 
 ![Image of Friends] (https://github.com/mwomack117/FriendFinder./blob/master/app/public/assets/images/friends3.jpg)
 
