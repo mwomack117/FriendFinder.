@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Survey</title>
+  <title>Survey</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
     crossorigin="anonymous">
-  
+
   <!-- Custom Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lusitana|Raleway" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -23,7 +23,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
- 
+
 
 </head>
 
@@ -41,13 +41,13 @@
         <div class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block slide-img" src="assets/images/friends4.jpg"> 
+              <img class="d-block slide-img" src="assets/images/friends4.jpg">
             </div>
             <div class="carousel-item">
-              <img class="d-block slide-img" src="assets/images/friends2.jpg"> 
+              <img class="d-block slide-img" src="assets/images/friends2.jpg">
             </div>
             <div class="carousel-item">
-              <img class="d-block slide-img" src="assets/images/friends3.jpg"> 
+              <img class="d-block slide-img" src="assets/images/friends3.jpg">
             </div>
           </div>
         </div>
@@ -231,8 +231,8 @@
     </div>
   </div>
 
-  
-  
+
+
   <!-- Optional JavaScript -->
   <script type="text/JavaScript">
     // set interval for carousel slides
@@ -310,7 +310,10 @@
       });
 
     } else {
-      alert("Please complete the survey before submitting.")
+        $(".modal-title").text("Missing Required Information");
+        $(".modal-body").html("<h3>Please answer all questions to find friends.</h3>");
+        $(".modal-footer").html("<h3><i class='fas fa-user-friends'></i>&nbsp;FriendFinder</h3>");
+        $("#results-modal").modal('toggle');
     }
      
 
