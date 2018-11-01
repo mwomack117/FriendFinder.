@@ -144,6 +144,22 @@ var friendsArray = [
             "2",
             "4"
         ]
+    },
+    {
+        "name": "Ol' Dirty Bastard",
+        "photo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Ol%27_Dirty_Bastard.jpg/220px-Ol%27_Dirty_Bastard.jpg",
+        "scores": [
+            "5",
+            "5",
+            "5",
+            "4",
+            "4",
+            "4",
+            "5",
+            "4",
+            "5",
+            "5"
+        ]
     }
 
 ];

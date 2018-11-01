@@ -12,12 +12,11 @@ module.exports = function (app) {
 
   // API POST Requests
   app.post("/api/friends", function (req, res) {
-    //push newFriend to friendsData array
+    // put newdata into variable
     var newFriend = req.body;
-    friendsData.push(newFriend);
+    console.log(req.body);
 
-
-    // ----- Find best match ----- //
+    // ------ Find best match ------ //
 
     var bestMatch = {}; // Empty object where we will add closest match
     var matchedFriend = 0; // matched friend index from array
@@ -28,7 +27,7 @@ module.exports = function (app) {
       var totalDiff = 0;
       // Loop thorugh each friends scores
       for (let s = 0; s < friendsData[f].scores.length; s++) {
-        var diff = Math.abs(parseInt(friendsData[f].scores) - parseInt(newFriend.scores[s]));
+        var diff = Math.abs(parseInt(friendsData[f].scores[s]) - parseInt(newFriend.scores[s]));
         totalDiff += diff;
       } // end inner loop
       // check to see if above logic works accurately
@@ -43,8 +42,12 @@ module.exports = function (app) {
 
     // best match found
     bestMatch = friendsData[matchedFriend];
+
     //return best match as JSON
     res.json(bestMatch);
+
+    //push newFriend to friendsData array
+    friendsData.push(newFriend);
 
 
   })

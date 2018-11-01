@@ -2,53 +2,85 @@
 <html lang="en">
 
 <head>
+  <title>Friend Finder</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
 
+  <!-- Custom Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lusitana|Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  
-  <title>Friend Finder</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+ 
 </head>
 
 <body>
-  <div class="container">
+  <section id="header">
+    <div class="container">
 
-    <div class="jumbotron">
-      <h1><i class="fas fa-users text-center"></i>&nbsp;Friend Finder</h1>
-      <hr>
-      <h2>Answer some quick basic questions</h2>
-      <h2>Then see which friends you are most compatible with!</h2>
+      <div class="text-center">
+        <h1><i class="fas fa-users text-center"></i>&nbsp;Friend Finder</h1>
+        <hr>
+        <h3>Answer some quick basic questions
+          <br>Then see which friends you are most compatible with!</h3>
+        <br>
+      </div>
+
+      <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block slide-img" src="assets/images/friends4.jpg">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block slide-img" src="assets/images/friends2.jpg">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block slide-img" src="assets/images/friends3.jpg">
+          </div>
+        </div>
+      </div>
       <br>
 
-      <a href="/survey">
-        <button type='button' class="btn btn-lg btn-primary">
-          <h4>Go to survey</h4>
-        </button>
-      </a>
-    </div>
-
-  </div>
-
-
-
-    <footer class="footer">
-      <div class="container">
-        <a href="/api/friends">API Friends List</a>
-        |
-        <a href="https://github.com/mwomack117/FriendFinder."><i class="fab fa-github"></i>&nbsp;Github Repo</a>
+      <div class="text-center">
+        <a href="/survey">
+          <button type='submit' class="btn btn-lg btn-primary">
+            Go to survey
+          </button>
+        </a>
       </div>
-    </footer>
+
+    </div>
+  </section>
+
+  <br>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="/api/friends">API Friends List</a>
+      |
+      <a href="https://github.com/mwomack117/FriendFinder."><i class="fab fa-github"></i>&nbsp;Github Repo</a>
+    </div>
+  </footer>
+
 
   <!-- Optional JavaScript -->
-  
+  <script>
+  // Activate Carousel
+  $('.carousel').carousel({
+  interval: 3000})
+  </script>
+
 </body>
 
 </html>
