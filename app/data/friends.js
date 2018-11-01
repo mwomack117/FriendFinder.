@@ -50,8 +50,8 @@ var friendsArray = [
         ]
     },
     {
-        "name": "Lana",
-        "photo": "https://i.scdn.co/image/56a3782b07eab32b5340f164c566349450ee84cd",
+        "name": "Method Man",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4OWfMNHMWAHv9P6zfh4fxi-VBbTdb2CvKpnpmniIr7JMDynGu",
         "scores": [
             "2",
             "3",
