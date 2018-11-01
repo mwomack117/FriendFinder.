@@ -1,5 +1,7 @@
 # FriendFinder.
+![Image of Friends]
 (https://github.com/mwomack117/FriendFinder./blob/master/app/public/assets/images/friends3.jpg)
+
 A compatibility-based "FriendFinder" application -- basically a dating app. Uses Node and Express servers.
 
 ### Purpose and Usefullness
